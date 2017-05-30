@@ -18,3 +18,5 @@
 + webpack.develop.config.js : webpack开发时配置文件
 + webpack.publish.config.js : webpack发布生产时配置文件
 + 运行:npm run start
+### v1版本为React的快速入门example
+

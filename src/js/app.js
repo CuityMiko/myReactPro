@@ -6,7 +6,7 @@ import Hello from '../components/Hello.js'
 
 ReactDOM.render(
     <div>
-       <Hello/>
+       <Hello name='zhangsanfeng'/>
     </div>,
     document.getElementById('app')
 )
