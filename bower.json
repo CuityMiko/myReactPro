@@ -1,0 +1,10 @@
+{
+  "name": "react-boilerplate",
+  "version": "1.0.0",
+  "description": "A starter project for React",
+  "homepage": "https://github.com/CuityMiko",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
