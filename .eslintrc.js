@@ -12,6 +12,7 @@ module.exports = {
         "document":true,
         "$":true
     },
+    "installedESLint": true,
     // 设置插件
     // "plugins": [
     //     'html'
@@ -21,9 +22,15 @@ module.exports = {
         "ecmaVersion": 6,
         "sourceType": "module",
         "ecmaFeatures": {
-            "jsx": true
+            "experimentalObjectRestSpread": true,
+            "jsx": true,
+            "arrowFunctions": true,
+            "classes": true,
+            "modules": true,
+            "defaultParams": true
         }
     },
+    "parser": "babel-eslint",
     // 启用的规则及各自的错误级别
     "rules" : {
         // 禁止用console
@@ -31,11 +38,32 @@ module.exports = {
         // 禁止用分号
         "semi":[0,'never'],
         // 在同一个作用域中禁止多次重复定义
-        "no-redeclare":1
+        "no-redeclare":1,
+        "no-empty": 0,
+        "comma-dangle": 0,
+        "no-unused-vars": 0,
+        "no-console": 0,
+        "no-const-assign": 2,
+        "no-dupe-class-members": 2,
+        "no-duplicate-case": 2,
+        "no-extra-parens": [2, "functions"],
+        "no-self-compare": 2,
+        "accessor-pairs": 2,
+        "constructor-super": 2,
+        "new-cap": [2, {
+            "newIsCap": true,
+            "capIsNew": false
+        }],
+        "new-parens": 2,
+        "no-array-constructor": 2,
+        "no-class-assign": 2,
+        "no-cond-assign": 2
     },
     // 指定你想启用的环境
     "env": {
         "browser": true,
-        "node": true
+        "es6": true,
+        "node": true,
+        "commonjs": true
     }
 };
