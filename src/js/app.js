@@ -4,6 +4,11 @@ import ReactDOM from 'react-dom'
 
 import Hello from '../components/Hello.js'
 import Life from '../examples/Life.js'
+import ODom from '../examples/Dom.js'
+import DoForm from '../examples/Form.js'
+import DoCheckBox from '../examples/CheckBox.js'
+import TodoApp from '../examples/Combination.js' 
+
 
 //属性扩散
 // const obj={
@@ -27,7 +32,7 @@ import Life from '../examples/Life.js'
 
 ReactDOM.render(
     <div>
-        <Life />
+        <TodoApp />
     </div>,
     document.getElementById('app')
 )

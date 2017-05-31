@@ -95,7 +95,7 @@ export default class Life extends Component{
      * 用来代替组件生命周期中的getDefaultProps()和getInitialState()方法
      * @param {*} props 
      */
-    static defaultProps = {
+    static defaultProps = { //props设置默认值方式
         pname: 'zhangsan',
         page: 10,
     }; 
@@ -118,7 +118,10 @@ export default class Life extends Component{
             <div>
                 <p id="ptext">name:{this.state.name},age:{this.state.age}</p>
                 <p>
-                    <button onClick={this.changeclick}>change</button>
+                    {/*onClick={()=>this.changeclick('张三')} 为ES6调用方法的方式*/}
+                    <button onClick={()=>this.changeclick('张三')}>点击</button>
+                    {/*onClick={this.changeto.bind(this,'jack')} 为ES5调用方法的方式*/}
+                    <button onClick={this.changeto.bind(this,'jack')}>change</button>
                 </p>
             </div>
         )
@@ -128,19 +131,21 @@ export default class Life extends Component{
         console.log('------组件已经渲染到DOM节点方法:componentDidMount')
     }
     // 以上方法除了render方法外在组件上的生命周期中只会被执行一次
-    changeclick=(e)=>{
+    // 两种声明点击方法形式
+    changeclick=(str,e)=>{
         console.log('------改变props和state属性')
-        var ptext= document.getElementById('ptext');
-
-        ptext.setAttribute('pname','haha'+Math.random(9))
-        ptext.setAttribute('page',Math.random(9))
-
         this.setState({
             age:Math.random(1,9),
             name:'zhangsan'+Math.random(1,9)
         })
+        console.log(`${str}点击`)
+        console.log(e)
         // this.props.page=266
         // this.props.pname='hello'+this.props.page;
+    }
+    changeto(str,e){
+        console.log(`${str} changeto`);
+        console.log(e);
     }
     // 组件将要接收到新属性
     componentWillReceiveProps(nextProps){
