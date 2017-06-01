@@ -7,6 +7,7 @@
  */
 
 import React,{Component} from 'react'
+import PropTypes from 'prop-types'
 
 class MyBtn extends Component{
     static contextTypes={
