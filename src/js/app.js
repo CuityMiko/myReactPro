@@ -8,6 +8,7 @@ import ODom from '../examples/Dom.js'
 import DoForm from '../examples/Form.js'
 import DoCheckBox from '../examples/CheckBox.js'
 import TodoApp from '../examples/Combination.js' 
+import PropTypes from '../examples/PropTypes.js'
 
 
 //属性扩散
@@ -30,9 +31,13 @@ import TodoApp from '../examples/Combination.js'
     document.getElementById('app')
 )*/
 
+var obj={
+    autoPlay:true,
+    maxnum:12344
+}
 ReactDOM.render(
     <div>
-        <TodoApp />
+        <PropTypes {...obj}/>
     </div>,
     document.getElementById('app')
 )
