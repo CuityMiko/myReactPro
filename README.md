@@ -19,4 +19,7 @@
 + webpack.publish.config.js : webpack发布生产时配置文件
 + 运行:npm run start
 ### v1版本为React的快速入门example
+### v2版本为React的进阶-router
++ src/containers : 路由的容器目录
++ src/js/routers.js : 路由文件
 
