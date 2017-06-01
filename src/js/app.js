@@ -2,14 +2,16 @@
 import React,{Component} from 'react'
 import ReactDOM from 'react-dom'
 
-import Hello from '../components/Hello.js'
-import Life from '../examples/Life.js'
-import ODom from '../examples/Dom.js'
-import DoForm from '../examples/Form.js'
-import DoCheckBox from '../examples/CheckBox.js'
-import TodoApp from '../examples/Combination.js' 
-import PropTypes from '../examples/PropTypes.js'
-import BtnList from '../examples/Context.js'
+// import Hello from '../components/Hello.js'
+// import Life from '../examples/Life.js'
+// import ODom from '../examples/Dom.js'
+// import DoForm from '../examples/Form.js'
+// import DoCheckBox from '../examples/CheckBox.js'
+// import TodoApp from '../examples/Combination.js' 
+// import PropTypes from '../examples/PropTypes.js'
+// import BtnList from '../examples/Context.js'
+// import Animate from '../examples/Animate.js'
+import Loader from '../examples/Loading.js'
 
 
 //属性扩散
@@ -43,7 +45,7 @@ ReactDOM.render(
     document.getElementById('app')
 )*/
 
-var btnobj={
+/*var btnobj={
     btns:[
         {id:1,color:'red',name:'按钮1'},
         {id:2,color:'#FFEC8B',name:'按钮2'},
@@ -61,6 +63,21 @@ var btnobj={
 ReactDOM.render(
     <div>
         <BtnList {...btnobj} />
+    </div>,
+    document.getElementById('app')
+)*/
+
+var loadingobj={
+    type:'spokes',
+    color:'blue',
+    height:100,
+    width:100,
+    delay:5000
+}
+
+ReactDOM.render(
+    <div>
+        <Loader {...loadingobj} />
     </div>,
     document.getElementById('app')
 )
