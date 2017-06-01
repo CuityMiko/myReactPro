@@ -9,6 +9,7 @@ import DoForm from '../examples/Form.js'
 import DoCheckBox from '../examples/CheckBox.js'
 import TodoApp from '../examples/Combination.js' 
 import PropTypes from '../examples/PropTypes.js'
+import BtnList from '../examples/Context.js'
 
 
 //属性扩散
@@ -31,13 +32,35 @@ import PropTypes from '../examples/PropTypes.js'
     document.getElementById('app')
 )*/
 
-var obj={
+/*var obj={
     autoPlay:true,
     maxnum:12344
 }
 ReactDOM.render(
     <div>
         <PropTypes {...obj}/>
+    </div>,
+    document.getElementById('app')
+)*/
+
+var btnobj={
+    btns:[
+        {id:1,color:'red',name:'按钮1'},
+        {id:2,color:'#FFEC8B',name:'按钮2'},
+        {id:3,color:'blue',name:'按钮3'},
+        {id:4,color:'#EE00EE',name:'按钮4'},
+        {id:5,color:'#90EE90',name:'按钮5'}
+    ],
+    infos:[
+        {id:1,text:'绚烂'},
+        {id:2,text:'缤纷'},
+        {id:3,text:'多彩'}
+    ],
+    info:'按钮组列表'
+}
+ReactDOM.render(
+    <div>
+        <BtnList {...btnobj} />
     </div>,
     document.getElementById('app')
 )
