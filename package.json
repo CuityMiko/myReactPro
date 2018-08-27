@@ -6,10 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "bower install",
-    "preinstall": "typings install",
-    "predevelop": "cnpm install",
-    "develop": "webpack-dev-server  --config webpack.develop.config.js --devtool eval --progress --colors --hot --content-base src",
-    "publish": "webpack --config  webpack.publish.config.js",
+    "dev": "webpack-dev-server  --config webpack.develop.config.js --devtool eval --progress --colors --hot --content-base src",
+    "build": "webpack --config  webpack.publish.config.js",
     "gulp": "gulp"
   },
   "author": "CuityMiko",
