@@ -9,7 +9,7 @@ module.exports = {
     // entry:path.resolve(__dirname,'src/js/app.js'),
     entry:[
         'webpack/hot/dev-server',
-        'webpack-dev-server/client?http://localhost:8080',
+        'webpack-dev-server/client?http://localhost:8071',
         path.resolve(__dirname,'src/js/app.js')
     ],
     output: {
@@ -67,7 +67,7 @@ module.exports = {
         //}
     },
     plugins: [
-        new OpenBrowserPlugin({url: 'http://localhost:8080/', browser: 'chrome'})
+        new OpenBrowserPlugin({url: 'http://localhost:8071/'})
     ]
 
 }
